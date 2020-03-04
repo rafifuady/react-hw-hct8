@@ -1,4 +1,8 @@
 import React from 'react';
+import NavigationBar from "./molecules/NavigationBar";
+import Card from "./molecules/Card";
+import CardText from "./molecules/Card/CardText";
+import Content from "./atom/Content";
 // import logo from './logo.svg';
 import './App.css';
 
@@ -6,64 +10,21 @@ class App extends React.Component {
   render() { 
     return (
       <div className = "App">
-        <nav className="navbar navbar-dark bg-dark">
-        <ul className="nav">
-          <li className="nav-item col-4">
-            <a className="navbar-brand active" href="https://github.com/rafifuady">QTEMU</a>
-          </li>
-          <li className="nav-item col-5">
-            <a className="navbar-text" href="https://github.com/rafifuady">Create Meetup</a>
-          </li>
-          <li className="nav-item col-3">
-            <a className="navbar-text" href="https://github.com/rafifuady">Explore</a>
-          </li>
-        </ul>
-        </nav>
+        <NavigationBar />
         <div className="container mx-1">
-
           <div className="container my-3">
-            <div className="card">
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-3">
-                    <img src="https://dummyimage.com/lrgrec" className="img-fluid" alt="img"></img>
-                  </div>
-                  <div className="col-6">
-                    <h5 className="card-title">Hacktiv8 Meetup</h5>
-                <h6 className="card-subtitle mb-2 text-muted">Jakarta, Indonesia</h6>
-                <p className="card-text">Member 1078</p>
-                <a name="" id="" className="btn btn-primary" href="https://github.com/rafifuady" role="button">Join Us</a>
-                  </div>
-                </div> 
-              </div>
-            </div> 
+            <Card  /> 
           </div>
 
-          <h5 class="">NEXT MEETUP</h5>
+          <Content className="h5" value ="NEXT MEETUP" />
           
           <div className="container my-3">
-            <div className="card">
-              <div className="card-body">
-                  <h5 className="card-title">Hacktiv8 Meetup</h5>
-                  <p className="card-text">Hello, Havascript and Node.js Ninjas!</p>
-                  <p className="card-text">Get Ready for our monthly meetup JakartaJS! This is will be our fifth meetup of 2018! 
-                  The meet up format will contain some short stories and technical talks. 
-                  If you have a short announcement you'd like to share with the audience, 
-                  you may do so during open mic announcement</p>
-                  ----
-                  <br></br>
-                  See You there
-                  <br></br>
-                  Best, Hengki, Giovanni, Sofian, Riza, 
-                  Agung The JakartaJS Organizers
-
-              </div>
-            </div> 
+            <CardText /> 
           </div>
 
-          <h5 class="">About Meetup</h5>
-          <p className="container">Come and meet other developers interested in the JavaScript and it's library in the Greater Jakarta area</p>
-          <p className="container">Twitter: JakartaJS and we use the hashtag #jakartajs</p>
+          <Content className="h5" value ="About Meetup" />
+          <Content className="p container" value="Come and meet other developers interested in the JavaScript and it's library in the Greater Jakarta area" />
+          <Content className="p container" value="Twitter: JakartaJS and we use the hashtag #jakartajs" />
           
           <h5 class="">Members</h5>
           <div className="container my-3">

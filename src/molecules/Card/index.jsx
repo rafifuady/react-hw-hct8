@@ -4,6 +4,25 @@ import Content from "../../atom/Content";
 import Images from "../../atom/Images";
 
 let Card = (props) => {
+  if (props.srcImg === "") {
+    console.log("a");
+    return (
+      <React.Fragment>
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <div className="col">
+                  <Content className="h5 card-title" value={props.valTitle} />
+                  <Content className="h6 card-subtitle mb-2 text-muted" value={props.valSubtitle} />
+                  <Content className="card-text" value={props.valBody} />
+                  <Button className={props.classBtn} href={props.hrefBtn} value={props.valBtn}  />
+                </div>
+              </div> 
+            </div>
+          </div>
+      </React.Fragment>
+  )
+  }
     return (
         <React.Fragment>
             <div className="card">

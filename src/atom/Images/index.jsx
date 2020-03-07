@@ -1,10 +1,11 @@
 import React from 'react';
 
-class Button extends React.Component {
-    render() {
+let Images = (props) => {
         return(
-            <img src={this.props.src} className="img-fluid" alt="text"></img>
+            <React.Fragment>
+            <img src={props.src} className={props.classImg} alt="text"></img>
+            </React.Fragment>
         )
   }
-}
-export default Button;
+
+export default Images;

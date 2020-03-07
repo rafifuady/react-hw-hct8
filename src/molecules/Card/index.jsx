@@ -10,13 +10,13 @@ let Card = (props) => {
               <div className="card-body">
                 <div className="row">
                   <div className="col-3">
-                    <Images src="https://dummyimage.com/lrgrec" />
+                    <Images src={props.srcImg} classImg={props.classImg} />
                   </div>
                   <div className="col-6">
-                    <Content className="h5 card-title" value="Hacktiv8 Meetup" />
-                    <Content className="h6 card-subtitle mb-2 text-muted" value="Jakarta, Indonesia" />
-                    <Content className="card-text" value="Member 1078" />
-                    <Button className="btn btn-primary" href="www.google.com" value="Join Us" />
+                    <Content className="h5 card-title" value={props.valTitle} />
+                    <Content className="h6 card-subtitle mb-2 text-muted" value={props.valSubtitle} />
+                    <Content className="card-text" value={props.valBody} />
+                    <Button className={props.classBtn} href={props.hrefBtn} value={props.valBtn}  />
                   </div>
                 </div> 
               </div>

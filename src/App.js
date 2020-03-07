@@ -62,7 +62,7 @@ class App extends React.Component {
           <div className="container">
             <div class="card-deck">
               <Card 
-                srcImg="https://dummyimage.com/lrgrec"
+                srcImg=""
                 classImg="img-fluid"
                 valTitle="Hacktiv8 Meetup"
                 valSubtitle="Jakarta, Indonesia"
@@ -73,7 +73,7 @@ class App extends React.Component {
               />
 
               <Card 
-                srcImg="https://dummyimage.com/lrgrec"
+                srcImg=""
                 classImg="img-fluid"
                 valTitle="Hacktiv8 Meetup"
                 valSubtitle="Jakarta, Indonesia"
@@ -84,7 +84,7 @@ class App extends React.Component {
               />
 
               <Card 
-                srcImg="https://dummyimage.com/lrgrec"
+                srcImg=""
                 classImg="img-fluid"
                 valTitle="Hacktiv8 Meetup"
                 valSubtitle="Jakarta, Indonesia"

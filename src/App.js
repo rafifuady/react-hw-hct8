@@ -1,11 +1,12 @@
 import React from 'react';
-import NavigationBar from "./molecules/NavigationBar";
+// import NavigationBar from "./molecules/NavigationBar";
 // import Card from "./molecules/Card";
 import CardText from "./molecules/Card/CardText";
 import Content from "./atom/Content";
 // import logo from './logo.svg';
 import './App.css';
 import { Navbar, NavLink, Nav, Card, Container, Row, Col } from 'react-bootstrap';
+import Button from './atom/Button';
 
 class App extends React.Component {
   render() { 
@@ -25,26 +26,31 @@ class App extends React.Component {
         {/* <NavigationBar /> oldNavBar */}
 
         {/* Card Hacktiv8 Meetup Join Us Section */}
-        <Container>
-          <Row>
-            <Card>
+        <div className="container mx-1">
+          <div className="container my-3">
+          <Card>
               <card-body>
                 <Row>
-                  <div className="col-xs-3">
-                      <Card.Img thumbnail variant="left" src="https://dummyimage.com/lrgrec" />
-                  </div>
-                  <div className="col-6">
+                  <Col xs="3">
+                    <Card.Img style={{padding: 10, height: 150, width: 150}} variant="left" src="https://dummyimage.com/lrgrec" />
+                  </Col>
+                  <Col xs="6">
                     <Card.Title>Hacktiv8 Meetup</Card.Title>
-                  </div>
-                  <Col xs>
                     <Card.Subtitle><p className="text-muted">Jakarta, Indonesia</p></Card.Subtitle>
+                    <Card.Text>Member 1078</Card.Text>                  
+                    <Card.Link href="">Join Us</Card.Link>
                   </Col>
                 </Row>
               </card-body>
             <Card.Body>
             </Card.Body>
             </Card>
-          </Row>
+          </div>
+        </div>
+        <Container>
+          <Row>
+            
+          </Row>  
         </Container>
 
         <div className="container mx-1">

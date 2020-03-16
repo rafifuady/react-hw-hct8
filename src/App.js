@@ -5,23 +5,33 @@ import CardText from "./molecules/Card/CardText";
 import Content from "./atom/Content";
 // import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import { Navbar, NavLink, Nav, Card, Container, Row, Col } from 'react-bootstrap';
 import Button from './atom/Button';
 
+const Home = () => (<div>
+  <h1> Welcome to HOME</h1>
+  <Link to='/about'>Go to About</Link>
+  </div>)
 class App extends React.Component {
+
   render() { 
     return (
       <div className = "App">
+        <Router>
+            <Route exact path="/CreateMeetup" component={CardText} />
+            <Route exact path="/Explore" component={CardText} />
+            {/* <Route exact path="/" component={CardText} /> */}
+          {/* Navigation Bar Section */}
+          <Navbar bg="dark" variant="dark">
+            <Navbar.Brand><Link to='/' style={{textDecoration: 'none', color: 'White'}}>QTEMU</Link></Navbar.Brand>
+            <Nav className="mr-auto">
+              <NavLink href=""><Link to='/CreateMeetup' style={{textDecoration: 'none', color: 'White'}}>Create Meetup</Link></NavLink>
+              <NavLink href="">Explore</NavLink>
+            </Nav>
+          </Navbar>
+        </Router>
 
-        {/* Navigation Bar Section */}
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="">QTEMU</Navbar.Brand>
-          <Nav className="mr-auto">
-            <NavLink href="">Create Meetup</NavLink>
-            <NavLink href="">Explore</NavLink>
-          </Nav>
-        </Navbar>
-        {/* Navigation Bar Section */}
         <br />
         {/* <NavigationBar /> oldNavBar */}
 
@@ -34,7 +44,7 @@ class App extends React.Component {
                   <Col xs="3">
                     <Card.Img style={{padding: 10, height: 150, width: 150}} variant="left" src="https://dummyimage.com/lrgrec" />
                   </Col>
-                  <Col xs="6">
+                  <Col xs="6" style={{padding: 10}}>
                     <Card.Title>Hacktiv8 Meetup</Card.Title>
                     <Card.Subtitle><p className="text-muted">Jakarta, Indonesia</p></Card.Subtitle>
                     <Card.Text>Member 1078</Card.Text>                  
